@@ -1,4 +1,10 @@
-# React + Vite
+# Shopping_Cart
+
+Creating a mock shopping cart using React.
+
+## Development
+
+This project uses React and Vite with HMR and ESLint.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
