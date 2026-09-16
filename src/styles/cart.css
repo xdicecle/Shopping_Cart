@@ -1,0 +1,264 @@
+.cart-page {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+}
+
+.cart-header {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.cart-header h2,
+.cart-header p {
+  margin-bottom: 0;
+}
+
+.cart-header h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem)
+}
+
+.cart-header > p:last-child,
+.cart-kicker {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.cart-kicker {
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(16rem, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.cart-items,
+.cart-summary,
+.cart-empty {
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  background: var(--background);
+}
+
+.cart-items {
+  padding: 0 1.25rem;
+}
+
+.cart-section-heading,
+.cart-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-section-heading {
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.75rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cart-section-heading h3,
+.cart-summary h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+.cart-item {
+  grid-template-columns: 4.5rem minmax(0, 1fr) auto auto;
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+
+.cart-item:last-child {
+  border-bottom: 0;
+}
+
+.cart-item img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: var(--border-radius-sm);
+  background: var(--surface);
+  object-fit: contain;
+}
+
+.cart-item h4,
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item h4 {
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+.cart-item p {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}
+
+.cart-item strong {
+  white-space: nowrap;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--neutral-300);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.cart-quantity button {
+  width: 2rem;
+  padding: 0.3rem;
+  background: transparent;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.cart-quantity button:hover {
+  background: var(--surface);
+}
+
+.cart-quantity span {
+  min-width: 1.4rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.cart-remove {
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.cart-remove:hover {
+  background: transparent;
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.cart-summary {
+  padding: 1.5rem;
+}
+
+.cart-summary h3 {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-summary dl {
+  margin: 0;
+}
+
+.cart-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  font-size: 0.9rem;
+}
+
+.cart-summary dt,
+.cart-summary dd {
+  margin: 0;
+}
+
+.cart-summary dt {
+  color: var(--muted);
+}
+
+.summary-total {
+  border-top: 1px solid var(--border);
+  margin-top: 0.4rem;
+  padding-top: 1.25rem !important;
+  font-size: 1.1rem !important;
+}
+
+.summary-total dt {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.checkout-button {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--background);
+  text-transform: lowercase;
+}
+
+.checkout-button:hover {
+  background: var(--primary-700);
+}
+
+.cart-empty {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cart-empty h3,
+.cart-empty p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cart-empty h3 {
+  text-transform: lowercase;
+}
+
+.cart-empty p {
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .cart-page {
+    padding-top: 2rem;
+  }
+
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  }
+
+  .cart-item img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .cart-item strong {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .cart-quantity {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 0.75rem;
+  }
+
+  .cart-remove {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+  }
+}
